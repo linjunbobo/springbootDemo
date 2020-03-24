@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,21 +17,11 @@ import java.util.Map;
  */
 public class TimeTest {
     public static void main(String[] args) {
-        //获取当前时间
 
-        LocalDate localDate = LocalDate.now();
-        System.out.println(localDate);
+        String ip = "http://192.168.129.172:10108/";
+        String[] ips = ip.split("/");
+        System.out.println(Arrays.toString(ips));
 
-        System.out.println(LocalTime.now());
-         //格式化时间
-        String todat ="20190102";
-        LocalDate todayParse = LocalDate.parse(todat, DateTimeFormatter.BASIC_ISO_DATE);
-        System.out.println(todayParse);
-        //获取日期和时间
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println(localDateTime+"   "+ new Date());
-
-        Map<String,String> map = new HashMap<>();
 
 
     }
